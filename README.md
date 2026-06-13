@@ -1,3 +1,15 @@
+---
+title: Redrob Candidate Ranker
+emoji: 🧠
+colorFrom: purple
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.58.0
+app_file: app.py
+pinned: true
+license: mit
+---
+
 <div align="center">
 
 <img src="https://img.shields.io/badge/Redrob-India%20Runs%20Hackathon-6c5ce7?style=for-the-badge&labelColor=0f0f13" />
