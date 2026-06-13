@@ -1,0 +1,60 @@
+team_name: "Trade Mark"
+
+primary_contact:
+  name: "Swaraj Kumar Behera"
+  email: "swarajbehera923@gmail.com"
+  phone: "+91-9178773834"
+
+team_members:
+  - name: "Swaraj Kumar Behera"
+    email: "swarajbehera923@gmail.com"
+    role: "ML Engineer / Team Lead"
+  - name: "Prajakta Kuila"
+    email: "prajaktakuila19@gmail.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/swaraj3092/redrob-ranker"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local Windows Machine"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Gemini (Antigravity)"
+
+ai_usage_summary: |
+  Used Gemini Antigravity for architecture discussion, code generation,
+  and code review. Ranking logic, scoring weights, skill taxonomies,
+  and all engineering decisions were made with full human understanding.
+  No candidate data was fed to any LLM during ranking.
+
+methodology_summary: |
+  5-layer deterministic scoring pipeline: (1) Honeypot detection via
+  profile internal consistency checks, (2) Minimum technical relevance
+  gate, (3) Technical match via JD-derived skill taxonomy (Tier 1-3 weights),
+  semantic cluster keyword matching across career text, platform assessment
+  scores, and GitHub activity, (4) Career quality via company type scoring
+  (product vs consulting), experience bracket, trajectory stability,
+  location, and education tier, (5) Multiplicative behavioral signal
+  modifier using open-to-work status, platform recency, recruiter response
+  rate, notice period, profile completeness, and verification status.
+  Final score: (0.55*tech + 0.35*career + 0.10*avail) * behavioral_mult.
+  Runtime: ~100s for 100K candidates on CPU. Zero API calls.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

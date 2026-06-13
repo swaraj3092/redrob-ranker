@@ -1,0 +1,35 @@
+# ─── Dataset files (too large for GitHub) ─────────────────────────────────────
+dataset/
+*.zip
+*.gz
+candidates.jsonl
+
+# ─── Temp / debug files ────────────────────────────────────────────────────────
+jd_text.txt
+readme_text.txt
+signals_text.txt
+submission_spec_text.txt
+inspect_results.py
+sample_submission_test.csv
+
+# ─── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# ─── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.env/
+env/
+.venv/
+
+# ─── OS junk ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
